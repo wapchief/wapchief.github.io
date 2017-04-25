@@ -1,0 +1,80 @@
+{
+  "name": "warehouse",
+  "version": "2.2.0",
+  "description": "Simple JSON-based database",
+  "main": "lib/database",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover --print both _mocha -- test/index.js",
+    "jsdoc": "jsdoc --configure .jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommy351/warehouse.git"
+  },
+  "keywords": [
+    "database",
+    "json",
+    "db"
+  ],
+  "author": {
+    "name": "Tommy Chen",
+    "email": "tommy351@gmail.com",
+    "url": "http://zespia.tw"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "^1.0.7",
+    "bluebird": "^3.2.2",
+    "cuid": "~1.3.8",
+    "graceful-fs": "^4.1.3",
+    "is-plain-object": "^2.0.1",
+    "lodash": "^4.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.2",
+    "jscs": "^2.9.0",
+    "jsdoc": "^3.4.0",
+    "minami": "^1.1.1",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3"
+  },
+  "gitHead": "e46a663a6e2d2fc00579a0d80412e976ac5da73f",
+  "bugs": {
+    "url": "https://github.com/tommy351/warehouse/issues"
+  },
+  "homepage": "https://github.com/tommy351/warehouse#readme",
+  "_id": "warehouse@2.2.0",
+  "_shasum": "5d09d64942992be667d8f7c86a09c2b8aea04062",
+  "_from": "warehouse@>=2.2.0 <3.0.0",
+  "_npmVersion": "3.7.1",
+  "_nodeVersion": "4.3.0",
+  "_npmUser": {
+    "name": "tommy351",
+    "email": "tommy351@gmail.com"
+  },
+  "dist": {
+    "shasum": "5d09d64942992be667d8f7c86a09c2b8aea04062",
+    "tarball": "https://registry.npmjs.org/warehouse/-/warehouse-2.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "tommy351",
+      "email": "tommy351@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/warehouse-2.2.0.tgz_1455433071736_0.9035211408045143"
+  },
+  "_resolved": "https://registry.npmjs.org/warehouse/-/warehouse-2.2.0.tgz",
+  "readme": "ERROR: No README data found!"
+}

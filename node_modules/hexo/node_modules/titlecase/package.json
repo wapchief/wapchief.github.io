@@ -1,0 +1,57 @@
+{
+  "name": "titlecase",
+  "version": "1.1.2",
+  "description": "Intelligently converting strings to title case (an enhanced fork of David Gouch's library)",
+  "main": "to-title-case.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rvagg/titlecase.git"
+  },
+  "keywords": [
+    "title-case",
+    "title",
+    "case",
+    "gouch",
+    "to-title-case"
+  ],
+  "author": {
+    "name": "Rod Vagg",
+    "email": "rod@vagg.org"
+  },
+  "license": "MIT",
+  "bin": {
+    "to-title-case": "./bin.js"
+  },
+  "gitHead": "5ac42662f485eddc2ec3cc1589101a1cb46571e7",
+  "bugs": {
+    "url": "https://github.com/rvagg/titlecase/issues"
+  },
+  "homepage": "https://github.com/rvagg/titlecase#readme",
+  "_id": "titlecase@1.1.2",
+  "scripts": {},
+  "_shasum": "78113d1108086b8326331a3247dea8f5a49ea853",
+  "_from": "titlecase@>=1.1.2 <2.0.0",
+  "_npmVersion": "3.6.0",
+  "_nodeVersion": "5.7.0",
+  "_npmUser": {
+    "name": "rvagg",
+    "email": "rod@vagg.org"
+  },
+  "maintainers": [
+    {
+      "name": "rvagg",
+      "email": "rod@vagg.org"
+    }
+  ],
+  "dist": {
+    "shasum": "78113d1108086b8326331a3247dea8f5a49ea853",
+    "tarball": "https://registry.npmjs.org/titlecase/-/titlecase-1.1.2.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/titlecase-1.1.2.tgz_1456170356949_0.8823311226442456"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/titlecase/-/titlecase-1.1.2.tgz",
+  "readme": "ERROR: No README data found!"
+}

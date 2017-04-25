@@ -1,0 +1,78 @@
+{
+  "name": "hexo-log",
+  "version": "0.1.2",
+  "description": "Logger for Hexo",
+  "main": "lib/log",
+  "scripts": {
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover --print both _mocha -- test/index.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexojs/hexo-log.git"
+  },
+  "homepage": "http://hexo.io/",
+  "keywords": [
+    "website",
+    "blog",
+    "cms",
+    "framework",
+    "hexo"
+  ],
+  "author": {
+    "name": "Tommy Chen",
+    "email": "tommy351@gmail.com",
+    "url": "http://zespia.tw"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "chalk": "^1.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-hexo": "^1.0.2",
+    "istanbul": "^0.4.2",
+    "jscs": "^2.9.0",
+    "jscs-preset-hexo": "^1.0.1",
+    "mocha": "^2.4.5",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.3"
+  },
+  "gitHead": "a2c47aa3c15be8cb5ad52ab94483999ee910d969",
+  "bugs": {
+    "url": "https://github.com/hexojs/hexo-log/issues"
+  },
+  "_id": "hexo-log@0.1.2",
+  "_shasum": "b3d36522226ece80b5da28a7db989ccdb394e5e0",
+  "_from": "hexo-log@>=0.1.2 <0.2.0",
+  "_npmVersion": "3.7.1",
+  "_nodeVersion": "4.3.0",
+  "_npmUser": {
+    "name": "tommy351",
+    "email": "tommy351@gmail.com"
+  },
+  "dist": {
+    "shasum": "b3d36522226ece80b5da28a7db989ccdb394e5e0",
+    "tarball": "https://registry.npmjs.org/hexo-log/-/hexo-log-0.1.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "tommy351",
+      "email": "tommy351@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/hexo-log-0.1.2.tgz_1455340595925_0.006521043600514531"
+  },
+  "_resolved": "https://registry.npmjs.org/hexo-log/-/hexo-log-0.1.2.tgz",
+  "readme": "ERROR: No README data found!"
+}

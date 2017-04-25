@@ -1,0 +1,90 @@
+{
+  "name": "nunjucks",
+  "description": "A powerful templating engine with inheritance, asynchronous control, and more (jinja2 inspired)",
+  "version": "2.5.2",
+  "author": {
+    "name": "James Long",
+    "email": "longster@gmail.com"
+  },
+  "dependencies": {
+    "asap": "^2.0.3",
+    "chokidar": "^1.6.0",
+    "yargs": "^3.32.0"
+  },
+  "browser": "./browser/nunjucks.js",
+  "devDependencies": {
+    "expect.js": "*",
+    "express": "4.x",
+    "istanbul": "0.3.x",
+    "jshint": "2.8.x",
+    "mocha": "*",
+    "node-libs-browser": "^0.4.3",
+    "supertest": "*",
+    "uglify-js": "*",
+    "webpack": "^1.8.11"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "test": "jshint . && istanbul cover ./node_modules/mocha/bin/_mocha -- -b -R tap tests",
+    "browserfiles": "./bin/bundle"
+  },
+  "bin": {
+    "nunjucks-precompile": "./bin/precompile"
+  },
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/nunjucks.git"
+  },
+  "keywords": [
+    "template",
+    "templating"
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mozilla/nunjucks/issues"
+  },
+  "gitHead": "b045b8759988eea7a2d2f0ffbd86c67cddeca527",
+  "homepage": "https://github.com/mozilla/nunjucks#readme",
+  "_id": "nunjucks@2.5.2",
+  "_shasum": "ea7d346e785b8a4874666c3cca9e18c577fba22c",
+  "_from": "nunjucks@>=2.4.2 <3.0.0",
+  "_npmVersion": "2.15.8",
+  "_nodeVersion": "4.4.7",
+  "_npmUser": {
+    "name": "vecmezoni",
+    "email": "alexander.inozemtsev@gmail.com"
+  },
+  "dist": {
+    "shasum": "ea7d346e785b8a4874666c3cca9e18c577fba22c",
+    "tarball": "https://registry.npmjs.org/nunjucks/-/nunjucks-2.5.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "carljm",
+      "email": "carl@oddbird.net"
+    },
+    {
+      "name": "jlongster",
+      "email": "longster@gmail.com"
+    },
+    {
+      "name": "samypesse",
+      "email": "samypesse@gmail.com"
+    },
+    {
+      "name": "vecmezoni",
+      "email": "alexander.inozemtsev@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nunjucks-2.5.2.tgz_1473844423741_0.1819024453870952"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nunjucks/-/nunjucks-2.5.2.tgz",
+  "readme": "ERROR: No README data found!"
+}

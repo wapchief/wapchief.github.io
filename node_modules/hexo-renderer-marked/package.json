@@ -1,0 +1,76 @@
+{
+  "name": "hexo-renderer-marked",
+  "version": "0.2.11",
+  "description": "Markdown renderer plugin for Hexo",
+  "main": "index",
+  "scripts": {
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover --print both _mocha -- test/index.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexojs/hexo-renderer-marked.git"
+  },
+  "keywords": [
+    "hexo",
+    "markdown",
+    "marked",
+    "renderer"
+  ],
+  "author": {
+    "name": "Tommy Chen",
+    "email": "tommy351@gmail.com",
+    "url": "http://zespia.tw"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "hexo-util": "^0.6.0",
+    "marked": "^0.3.5",
+    "object-assign": "^4.1.0",
+    "strip-indent": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.12.0",
+    "eslint-config-hexo": "^1.0.3",
+    "istanbul": "^0.4.3",
+    "jscs": "^3.0.4",
+    "jscs-preset-hexo": "^1.0.1",
+    "mocha": "^2.5.3"
+  },
+  "gitHead": "a85a54c88773f06f583e8b32af54eda8f0694dfe",
+  "bugs": {
+    "url": "https://github.com/hexojs/hexo-renderer-marked/issues"
+  },
+  "homepage": "https://github.com/hexojs/hexo-renderer-marked#readme",
+  "_id": "hexo-renderer-marked@0.2.11",
+  "_shasum": "32fd3880d3c3979fd7b8015ec121a6c44ff49f84",
+  "_from": "hexo-renderer-marked@>=0.2.10 <0.3.0",
+  "_npmVersion": "3.7.1",
+  "_nodeVersion": "4.3.0",
+  "_npmUser": {
+    "name": "tommy351",
+    "email": "tommy351@gmail.com"
+  },
+  "dist": {
+    "shasum": "32fd3880d3c3979fd7b8015ec121a6c44ff49f84",
+    "tarball": "https://registry.npmjs.org/hexo-renderer-marked/-/hexo-renderer-marked-0.2.11.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "tommy351",
+      "email": "tommy351@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/hexo-renderer-marked-0.2.11.tgz_1465822858506_0.6994716057088226"
+  },
+  "_resolved": "https://registry.npmjs.org/hexo-renderer-marked/-/hexo-renderer-marked-0.2.11.tgz",
+  "readme": "ERROR: No README data found!"
+}

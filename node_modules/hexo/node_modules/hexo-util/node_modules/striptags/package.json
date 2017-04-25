@@ -1,0 +1,72 @@
+{
+  "name": "striptags",
+  "description": "PHP strip_tags in Node.js",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Norris",
+    "url": "https://github.com/ericnorris"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericnorris/striptags.git"
+  },
+  "main": "striptags.js",
+  "homepage": "https://github.com/ericnorris/striptags",
+  "bugs": {
+    "url": "https://github.com/ericnorris/striptags/issues"
+  },
+  "version": "2.2.1",
+  "devDependencies": {
+    "blanket": "~1.1.6",
+    "mocha": "~2.1.0"
+  },
+  "keywords": [
+    "striptags",
+    "strip_tags",
+    "html",
+    "strip",
+    "tags"
+  ],
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "test-coverage": "node ./node_modules/mocha/bin/mocha --require blanket -R html-cov > coverage.html"
+  },
+  "jshintConfig": {
+    "node": true
+  },
+  "config": {
+    "blanket": {
+      "pattern": "src/",
+      "data-cover-reporter-options": {
+        "shortnames": true
+      }
+    }
+  },
+  "gitHead": "1563e2f2a60b088750fec7e83136242313842086",
+  "_id": "striptags@2.2.1",
+  "_shasum": "4c450b708d41b8bf39cf24c49ff234fc6aabfd32",
+  "_from": "striptags@>=2.1.1 <3.0.0",
+  "_npmVersion": "3.10.10",
+  "_nodeVersion": "6.9.4",
+  "_npmUser": {
+    "name": "ericnorris",
+    "email": "erictnorris@gmail.com"
+  },
+  "dist": {
+    "shasum": "4c450b708d41b8bf39cf24c49ff234fc6aabfd32",
+    "tarball": "https://registry.npmjs.org/striptags/-/striptags-2.2.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "ericnorris",
+      "email": "erictnorris@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/striptags-2.2.1.tgz_1484743797874_0.8673434786032885"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/striptags/-/striptags-2.2.1.tgz",
+  "readme": "ERROR: No README data found!"
+}

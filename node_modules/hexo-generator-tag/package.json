@@ -1,0 +1,74 @@
+{
+  "name": "hexo-generator-tag",
+  "version": "0.2.0",
+  "description": "Tag generator for Hexo.",
+  "main": "index",
+  "scripts": {
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover --print both _mocha -- test/index.js"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexojs/hexo-generator-tag.git"
+  },
+  "homepage": "http://hexo.io/",
+  "keywords": [
+    "hexo",
+    "generator",
+    "tag"
+  ],
+  "author": {
+    "name": "Tommy Chen",
+    "email": "tommy351@gmail.com",
+    "url": "http://zespia.tw"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "hexo": "^3.1.1",
+    "mocha": "^2.4.5",
+    "istanbul": "^0.4.2",
+    "eslint": "^1.10.3",
+    "jscs": "^2.9.0",
+    "eslint-config-hexo": "^1.0.2",
+    "jscs-preset-hexo": "^1.0.1"
+  },
+  "dependencies": {
+    "hexo-pagination": "0.0.2",
+    "object-assign": "^4.0.1"
+  },
+  "gitHead": "a209c1b56c70a8989df6a7dfb71b705f24eb70b6",
+  "bugs": {
+    "url": "https://github.com/hexojs/hexo-generator-tag/issues"
+  },
+  "_id": "hexo-generator-tag@0.2.0",
+  "_shasum": "c5715846bb41e57d9c20c1d66d7db21a1abf7a62",
+  "_from": "hexo-generator-tag@>=0.2.0 <0.3.0",
+  "_npmVersion": "3.3.3",
+  "_nodeVersion": "4.0.0",
+  "_npmUser": {
+    "name": "tommy351",
+    "email": "tommy351@gmail.com"
+  },
+  "dist": {
+    "shasum": "c5715846bb41e57d9c20c1d66d7db21a1abf7a62",
+    "tarball": "https://registry.npmjs.org/hexo-generator-tag/-/hexo-generator-tag-0.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "tommy351",
+      "email": "tommy351@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/hexo-generator-tag-0.2.0.tgz_1454750276561_0.16177647141739726"
+  },
+  "_resolved": "https://registry.npmjs.org/hexo-generator-tag/-/hexo-generator-tag-0.2.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
