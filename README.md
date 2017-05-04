@@ -1,10 +1,13 @@
 
 
 #### 个性域名 http://wapchief.com
+#### 原始域名 http://wapchief.github.io
 
 搭建教程请参考http://www.jianshu.com/p/a39573555039
 
 联系方式：[![alt text](http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png)](http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=zLutvK_kpamqjL294q_joQ)
+或者可以通过简书私信我
+
 
 master分支用于部署后生产的静态页面。
 
