@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Android仿掌上英雄联盟首页，实现折叠效果 | wapchief的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="不单单是掌上英雄联盟，像微博发现页也用了这样的布局，当滑动到一定距离的时候，自动隐藏轮播图，或者标题栏下面的布局。并且使tablayout置顶。">
+<meta name="keywords" content="android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android仿掌上英雄联盟首页，实现折叠效果">
+<meta property="og:url" content="http://yoursite.com/2017/07/09/20170709_2/index.html">
+<meta property="og:site_name" content="wapchief的博客">
+<meta property="og:description" content="不单单是掌上英雄联盟，像微博发现页也用了这样的布局，当滑动到一定距离的时候，自动隐藏轮播图，或者标题栏下面的布局。并且使tablayout置顶。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2858691-bf0dc4e8d169d569.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2858691-e2a9d0885f4acc57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/480">
+<meta property="og:updated_time" content="2017-07-09T09:37:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android仿掌上英雄联盟首页，实现折叠效果">
+<meta name="twitter:description" content="不单单是掌上英雄联盟，像微博发现页也用了这样的布局，当滑动到一定距离的时候，自动隐藏轮播图，或者标题栏下面的布局。并且使tablayout置顶。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2858691-bf0dc4e8d169d569.gif?imageMogr2/auto-orient/strip">
+  
+    <link rel="alternative" href="/atom.xml" title="wapchief的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Wap Chief</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Android、IT互联网</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="http://www.jianshu.com/users/9f0bedd0835c">简书</a></li>
+                        
+                            <li><a href="http://blog.csdn.net/wapchief">CSDN</a></li>
+                        
+                            <li><a href="https://github.com/wapchief">GitHub</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=zLutvK_kpamqjL294q_joQ" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/wapchief" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="http://weibo.com/waphack" title="weibo">weibo</a>
+                            
+                                <a class="fl twitter" target="_blank" href="https://twitter.com/wapchief" title="twitter">twitter</a>
+                            
+                                <a class="fl facebook" target="_blank" href="https://www.facebook.com/wapchief" title="facebook">facebook</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/android/" style="font-size: 20px;">android</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/kotlin/" style="font-size: 10px;">kotlin</a> <a href="/tags/产品/" style="font-size: 10px;">产品</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">坐标北京，从事Android开发工作。爱折腾，爱挖坑。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Wap Chief</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Wap Chief</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Android、IT互联网</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="http://www.jianshu.com/users/9f0bedd0835c">简书</a></li>
+                
+                    <li><a href="http://blog.csdn.net/wapchief">CSDN</a></li>
+                
+                    <li><a href="https://github.com/wapchief">GitHub</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=zLutvK_kpamqjL294q_joQ" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/wapchief" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="http://weibo.com/waphack" title="weibo">weibo</a>
+                    
+                        <a class="twitter" target="_blank" href="https://twitter.com/wapchief" title="twitter">twitter</a>
+                    
+                        <a class="facebook" target="_blank" href="https://www.facebook.com/wapchief" title="facebook">facebook</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-20170709_2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/09/20170709_2/" class="article-date">
+      <time datetime="2017-07-09T03:41:29.000Z" itemprop="datePublished">2017-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Android仿掌上英雄联盟首页，实现折叠效果
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>不单单是掌上英雄联盟，像微博发现页也用了这样的布局，当滑动到一定距离的时候，自动隐藏轮播图，或者标题栏下面的布局。并且使tablayout置顶。</p>
+<a id="more"></a>
+<p>与之相似的还有简书的个人页面也是这样的布局。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2858691-bf0dc4e8d169d569.gif?imageMogr2/auto-orient/strip" alt="lol.gif"><br>图片处理的有些不清楚。建议下载安装包自行查看效果</p>
+<ul>
+<li><a href="https://github.com/wapchief/imitationLOL/raw/master/apk/app-debug.apk" target="_blank" rel="external">安装包下载-2.83M</a></li>
+</ul>
+<p>#####首页大概分为几个部分</p>
+<ul>
+<li>状态栏</li>
+<li>标题栏</li>
+<li>轮播图</li>
+<li>切换的Tab</li>
+<li>资讯列表</li>
+<li>资讯列表头部推荐</li>
+<li>刷新控件</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/2858691-e2a9d0885f4acc57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt="lol.png"></p>
+<p>整个页面是一个Activity，最外层是刷新控件，然后是标题栏和折叠布局ScrollableLayout。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;com.cjj.MaterialRefreshLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;&gt;</div><div class="line"></div><div class="line">    &lt;RelativeLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;&gt;</div><div class="line"></div><div class="line">        &lt;com.cpoopc.scrollablelayoutlib.ScrollableLayout</div><div class="line">            android:id=&quot;@+id/scrollablelayout&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot;</div><div class="line">            android:layout_marginTop=&quot;16dp&quot;</div><div class="line">            android:orientation=&quot;vertical&quot;&gt;</div><div class="line">            </div><div class="line">        &lt;/com.cpoopc.scrollablelayoutlib.ScrollableLayout&gt;</div><div class="line"></div><div class="line">        &lt;include layout=&quot;@layout/title_bar&quot; /&gt;</div><div class="line">    &lt;/RelativeLayout&gt;</div><div class="line">&lt;/com.cjj.MaterialRefreshLayout&gt;</div></pre></td></tr></table></figure>
+<p>ScrollableLayout里面嵌套了轮播图、tablayout、viewpager。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;com.cpoopc.scrollablelayoutlib.ScrollableLayout</div><div class="line">    android:id=&quot;@+id/scrollablelayout&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:layout_marginTop=&quot;16dp&quot;</div><div class="line">    android:orientation=&quot;vertical&quot;&gt;</div><div class="line">    &lt;!--header--&gt;</div><div class="line">    &lt;com.youth.banner.Banner</div><div class="line">        android:id=&quot;@+id/header&quot;</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;200dp&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;!--置顶的部分--&gt;</div><div class="line">    &lt;android.support.design.widget.TabLayout</div><div class="line">        android:id=&quot;@+id/tab&quot;</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;50dp&quot;</div><div class="line">        android:background=&quot;@color/white&quot;</div><div class="line">        app:tabIndicatorColor=&quot;@color/tab_select&quot;</div><div class="line">        app:tabMode=&quot;scrollable&quot;</div><div class="line">        app:tabSelectedTextColor=&quot;@color/tab_select&quot; /&gt;</div><div class="line">    &lt;!--滚动视图--&gt;</div><div class="line">    &lt;android.support.v4.view.ViewPager</div><div class="line">        android:id=&quot;@+id/vp&quot;</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot; /&gt;</div><div class="line">&lt;/com.cpoopc.scrollablelayoutlib.ScrollableLayout&gt;</div></pre></td></tr></table></figure></p>
+<p>然后切换是通过tab和viewpager联动加载的Fragment<br>Fragment中列表用的是RecyclerView，然后再给RecyclerView添加了一个Header，实现推荐功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;ScrollView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    &gt;</div><div class="line">    &lt;RelativeLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;&gt;</div><div class="line"></div><div class="line">        &lt;android.support.v7.widget.RecyclerView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:id=&quot;@+id/fragment_lv&quot;</div><div class="line">            android:paddingLeft=&quot;12dp&quot;</div><div class="line">            android:paddingRight=&quot;12dp&quot;</div><div class="line">            android:nestedScrollingEnabled=&quot;false&quot;</div><div class="line">            android:layout_height=&quot;match_parent&quot;/&gt;</div><div class="line"></div><div class="line">        &lt;com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader</div><div class="line">            android:id=&quot;@+id/header&quot;</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_gravity=&quot;&quot;</div><div class="line">            android:nestedScrollingEnabled=&quot;false&quot;</div><div class="line">            android:layout_height=&quot;60dp&quot;/&gt;</div><div class="line">    &lt;/RelativeLayout&gt;</div><div class="line">&lt;/ScrollView&gt;</div></pre></td></tr></table></figure></p>
+<p>#####创建布局需要注意的问题</p>
+<ul>
+<li><p>ScrollView和RecyclerView滚动冲突，造成滑动不流畅。<br>需要在RecyclerView设置android:nestedScrollingEnabled=”false”属性，使滚动事件交给ScrollView处理。</p>
+</li>
+<li><p>添加RecyclerViewHeader的时候，父布局只能识别RelativeLayout 、LinearLayout、和FrameLayout这三种控件。</p>
+</li>
+<li><p>ScrollableLayout子布局是固定的格式，分为三部分。</p>
+</li>
+</ul>
+<p>#####设置好布局后，进行数据的填充，先操作activty中的元素</p>
+<p>实例化控件直接用ButterKnife一键绑定了。直接加载控件数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">private void initView() &#123;</div><div class="line">    //加载轮播图数据</div><div class="line">    initBanner();</div><div class="line">    //TabLayout</div><div class="line">    initTabLayout();</div><div class="line">    //创建Fragment</div><div class="line">    initFragment();</div><div class="line">    //监听滚动状态</div><div class="line">    initOnClickScroll();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>随便在网上找了三张图片，使用Picasso框架完成图片的加载。<br>start开启轮播。<br>这时候打开app就能看到效果了。<br>该框架支持多种轮播样式风格，根据需要自己设置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/*轮播*/</div><div class="line">private void initBanner() &#123;</div><div class="line">    //圆形指示器</div><div class="line">    header.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);</div><div class="line">    //指示器居中</div><div class="line">    header.setIndicatorGravity(BannerConfig.CENTER);</div><div class="line">    img.add(&quot;http://m.beequick.cn/static/bee/img/m/boot_logo-275a61e3.png&quot;);</div><div class="line">    img.add(&quot;http://m.beequick.cn/static/bee/img/m/boot_logo-275a61e3.png&quot;);</div><div class="line">    img.add(&quot;http://m.beequick.cn/static/bee/img/m/boot_logo-275a61e3.png&quot;);</div><div class="line">    header.setImageLoader(new ImageLoader() &#123;</div><div class="line">        @Override</div><div class="line">        public void displayImage(Context context, Object o, ImageView imageView) &#123;</div><div class="line">            Picasso.with(context)</div><div class="line">                    .load(url)</div><div class="line">                    .into(imageView);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    header.setImages(img);</div><div class="line">    header.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后进行tablayout的初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">private String[] titles = new String[]&#123;&quot;最新&quot;, &quot;专栏&quot;, &quot;官方&quot;, &quot;活动&quot;, &quot;攻略&quot;, &quot;娱乐&quot;, &quot;收藏&quot;&#125;;</div><div class="line"></div><div class="line">/*初始化tab标签*/</div><div class="line">private void initTabLayout() &#123;</div><div class="line"></div><div class="line">    for (int i=0;i&lt;titles.length;i++)&#123;</div><div class="line">        tab.addTab(tab.newTab().setText(titles[i]));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面只是装载了标签数据，通过setupWithViewPager关联viewpager</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/*初始化Fragment*/</div><div class="line">private void initFragment() &#123;</div><div class="line"></div><div class="line">    ScrollableFragment fragment = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment1 = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment2 = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment3 = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment4 = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment5 = new ScrollableFragment();</div><div class="line">    ScrollableFragment fragment6 = new ScrollableFragment();</div><div class="line">    fragmentList.add(fragment);</div><div class="line">    fragmentList.add(fragment1);</div><div class="line">    fragmentList.add(fragment2);</div><div class="line">    fragmentList.add(fragment3);</div><div class="line">    fragmentList.add(fragment4);</div><div class="line">    fragmentList.add(fragment5);</div><div class="line">    fragmentList.add(fragment6);</div><div class="line">    adapterVP = new ViewPagerAdapter(getSupportFragmentManager());</div><div class="line">    vp.setAdapter(adapterVP);</div><div class="line">    tab.setupWithViewPager(vp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果到这一步运行app，发现tab标签的状态或者颜色没有选中的效果，检查viewpager的adapter是否重写了getPageTitle方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public CharSequence getPageTitle(int position) &#123;</div><div class="line">           return titles[position];</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<p>#####到这里已经完成了acticity的工作，但是我们还要实现标题栏渐变消失的效果。<br>在android中大多数跟滚动有关的控件，都有自己的滚动监听事件，来让开发者调用，以实现高级的效果。</p>
+<p>而这里用的是ScrollableLayout控件，该控件内部也是基于ScrollView滚动，所以在内部给我们封装好了监听事件，直接调动监听方法就可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/*滚动监听*/</div><div class="line">  private void initOnClickScroll() &#123;</div><div class="line">      scrollablelayout.setOnScrollListener(new ScrollableLayout.OnScrollListener() &#123;</div><div class="line">          @Override</div><div class="line">          public void onScroll(int i, int i1) &#123;</div><div class="line">              if (i &gt;= i1) &#123;</div><div class="line">                  title.setVisibility(View.GONE);</div><div class="line">              &#125; else &#123;</div><div class="line">                  title.setVisibility(View.VISIBLE);</div><div class="line">              &#125;</div><div class="line">              //通过距离设置渐变效果</div><div class="line">              float scale = (float) i1-i;</div><div class="line">              float alpha = (255 * scale);</div><div class="line">              float alpha2 = scale/i1*150;</div><div class="line">              float alphaTv = scale / i1 * 255;</div><div class="line">              title.setBackgroundColor(Color.argb((int) alpha2, 0, 0, 0));</div><div class="line">              titleBarTitle.setTextColor(Color.argb((int) alphaTv, 198, 166, 102));</div><div class="line">              titleBarContent.setTextColor(Color.argb((int) alphaTv,198,166,102));</div><div class="line">          &#125;</div><div class="line">      &#125;);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>onScroll有两个属性，一个I是滚动的距离，是根据手势滑动的距离计算出的距离，i1是从开始滚动到header消失这之间的总距离。也就是固定的。</p>
+<p>为了区别，这里加了标题栏的显示和隐藏，当底部滚动视图置顶的时候，也就是i=i1的时候，就把标题栏隐藏掉。</p>
+<p>但是我们这里是需要一个渐变隐藏的效果，也就是让控件背景颜色从不透明到全透明的实时渐变的一个过程。</p>
+<p>颜色需要用到argb，有四个参数，第一个就是透明度，<br>如果需要递增则用<code>255 * scale</code><br>递减用<code>scale ／ i1 * 255</code><br>需要半透的话，把255再除以2。</p>
+<p>#####Fragment里面需要操作的东西就少了</p>
+<p>两行代码就实现了headerview的添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">private void initAdapter() &#123;</div><div class="line">      View headerView = View.inflate(getContext(), R.layout.view_header, null);</div><div class="line">      LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());</div><div class="line">      recyclerView.setLayoutManager(layoutManager);</div><div class="line">      header.addView(headerView);</div><div class="line">      header.attachTo(recyclerView);</div><div class="line">      adapter = new FragmentAdapter(data, getActivity());</div><div class="line">      //分割线</div><div class="line">      recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));</div><div class="line">      recyclerView.setAdapter(adapter);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>#####总结</p>
+<p>其实要实现这种效果的方法还有很多，比如利用Design库中的CoordinatorLayout，和AppBarLayout结合来用，也能实现折叠效果。</p>
+<p>包括GitHub也有一些开源的库可供我们选择使用，像ScrollableLayout 、ObservableScrollView这些都是非常优秀的框架。</p>
+<p>在实际项目中节省了很多开发时间。</p>
+<p>唯一的时间成本就是我们学习这些框架的时间，当熟练运用之后，这些看似复杂的东西，可能只需要短短的几分钟而已。</p>
+<hr>
+<p>#####关于<br>本文所用到的开源库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//recyclerview列表</div><div class="line">compile &apos;com.android.support:recyclerview-v7:25.0.0&apos;</div><div class="line">//design库，用于tablayout，CoordinatorLayout折叠布局等</div><div class="line">compile &apos;com.android.support:design:25.0.0&apos;</div><div class="line">//一键绑定控件</div><div class="line">compile &apos;com.jakewharton:butterknife:5.1.1&apos;</div><div class="line">compile &apos;com.android.support:appcompat-v7:25.0.0&apos;</div><div class="line">//网络请求</div><div class="line">compile &apos;com.squareup.picasso:picasso:2.5.2&apos;</div><div class="line">//ConstraintLayout</div><div class="line">compile &apos;com.android.support.constraint:constraint-layout:1.0.2&apos;</div><div class="line">//轮播控件</div><div class="line">compile &apos;com.youth.banner:banner:1.4.9&apos;</div><div class="line">//刷新加载控件</div><div class="line">compile &apos;com.cjj.materialrefeshlayout:library:1.3.0&apos;</div><div class="line">//折叠控件，解决了滚动冲突</div><div class="line">compile &apos;com.github.cpoopc:scrollablelayoutlib:1.0.1&apos;</div><div class="line">//RecyclerViewHeader</div><div class="line">compile &apos;com.bartoszlipinski:recyclerviewheader2:2.0.1&apos;</div></pre></td></tr></table></figure>
+<p>最后附上Demo地址：<a href="https://github.com/wapchief/imitationLOL" target="_blank" rel="external">https://github.com/wapchief/imitationLOL</a></p>
+<h5 id="新的分支"><a href="#新的分支" class="headerlink" title="新的分支"></a>新的分支</h5><p>添加了新的分支new，布局调整，使更接近于实际效果。<br>调整了header的位置，为了实现悬浮消失的效果，将header从recyclerView独立出来，放在了activity，并且对头部标题栏做了优化，<br>可以自助选择tab置顶的时候，标题栏是否消失。</p>
+<p>并且在标题栏选项中增加了一个彩蛋，是仿美团外卖配送时折叠的效果。</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/07/09/20170709_2/">Android仿掌上英雄联盟首页，实现折叠效果</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Wap Chief 的个人博客">Wap Chief</a></p>
+        <p><span>发布时间:</span>2017年07月09日 - 11时41分</p>
+        <p><span>最后更新:</span>2017年07月09日 - 17时37分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/07/09/20170709_2/" title="Android仿掌上英雄联盟首页，实现折叠效果">http://yoursite.com/2017/07/09/20170709_2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/07/09/20170709_2/　　作者: Wap Chief" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/07/09/20170709_1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          使用Kotlin仿的简书个人主页，只需一个控件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/09/4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">青少年心理引导类app目标用户人群分析</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#新的分支"><span class="toc-number">1.</span> <span class="toc-text">新的分支</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/07/09/20170709_1/" title="上一篇: 使用Kotlin仿的简书个人主页，只需一个控件">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/07/09/4/" title="下一篇: 青少年心理引导类app目标用户人群分析">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_4/">使用hexo+github搭建个人博客遇到过哪些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_3/">RecyclerViewHeader+ViewFlipper仿淘宝头条滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/1/">使用hexo+github免费搭建个人博客网站超详细教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20161004/">ListView调用按钮删除某一行item</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_1/">使用Kotlin仿的简书个人主页，只需一个控件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_2/">Android仿掌上英雄联盟首页，实现折叠效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/4/">青少年心理引导类app目标用户人群分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/2/">必须要会的Git基本使用及常用命令操作</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Wap Chief
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >访客: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
