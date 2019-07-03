@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>必须要会的Git基本使用及常用命令操作 | wapchief的博客</title>
+  <title>使用hexo+github搭建个人博客遇到过哪些坑 | wapchief的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。">
-<meta name="keywords" content="android,git">
+  <meta name="description" content="ListView布局包括checkbox(复选框)、img、title（商品名称）、type（分类）、两个Button（加减）、三个textview（原价，单价，数量），imgDelete（delete）">
+<meta name="keywords" content="hexo,博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="必须要会的Git基本使用及常用命令操作">
-<meta property="og:url" content="http://yoursite.com/2017/07/09/2/index.html">
+<meta property="og:title" content="使用hexo+github搭建个人博客遇到过哪些坑">
+<meta property="og:url" content="http://yoursite.com/2019/07/03/20170709_4/index.html">
 <meta property="og:site_name" content="wapchief的博客">
-<meta property="og:description" content="之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。">
-<meta property="og:updated_time" content="2017-07-09T03:41:29.000Z">
+<meta property="og:description" content="ListView布局包括checkbox(复选框)、img、title（商品名称）、type（分类）、两个Button（加减）、三个textview（原价，单价，数量），imgDelete（delete）">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2858691-f100c8bd2b0f428c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-07-03T07:40:53.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="必须要会的Git基本使用及常用命令操作">
-<meta name="twitter:description" content="之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。">
+<meta name="twitter:title" content="使用hexo+github搭建个人博客遇到过哪些坑">
+<meta name="twitter:description" content="ListView布局包括checkbox(复选框)、img、title（商品名称）、type（分类）、两个Button（加减）、三个textview（原价，单价，数量），imgDelete（delete）">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2858691-f100c8bd2b0f428c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="wapchief的博客" type="application/atom+xml">
   
@@ -206,11 +208,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-2" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-20170709_4" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/09/2/" class="article-date">
-      <time datetime="2017-07-09T03:41:29.000Z" itemprop="datePublished">2017-07-09</time>
+      <a href="/2019/07/03/20170709_4/" class="article-date">
+      <time datetime="2019-07-03T07:40:53.352Z" itemprop="datePublished">2019-07-03</time>
 </a>
     </div>
   
@@ -223,7 +225,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      必须要会的Git基本使用及常用命令操作
+      使用hexo+github搭建个人博客遇到过哪些坑
     </h1>
   
 
@@ -234,7 +236,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -244,45 +246,55 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。<br>最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。<br><a id="more"></a><br>一开始都是别人建好远程库，克隆下来就行了。<br>下面内容只是带你git入门，一些基础的东西，是开发过程中一些基本的操作，单单这些你会用了之后就能发现他的好处，以及使用命令行Enter敲击时的快感，还能提高逼格。<br>当然我们还是为了方便项目管理。</p>
-<p>#####安装<br>git工具下载地址，可以选择适合自己的操作系统：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a><br>安装完git，要配置环境变量，拷贝git安装目录下的bin文件目录，如D:\Program Files\Git\bin<br>,将目录拷贝添加到PATH变量后。<br><strong>注意：与前面的值要用“;”号隔开</strong><br>具体步骤：</p>
+        <p>ListView布局包括checkbox(复选框)、img、title（商品名称）、type（分类）、两个Button（加减）、三个textview（原价，单价，数量），imgDelete（delete）<br><a id="more"></a></p>
+<p>####一、</p>
 <blockquote>
-<p>右键计算机-属性-高级系统设置-环境变量-PATH将目录添加到后面，%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;D:\Program Files\Git\bin</p>
+<p>fatal: Could not read from remote repository.<br>致命:无法读取远程存储库。<br>Please make sure you have the correct access rights and the repository exists.<br>请确保你有正确的访问权限和存储库的存在。</p>
 </blockquote>
-<p>安装完成后使用 <code>git --version</code>命令查看一下git版本，测试是否安装、配置成功。</p>
-<p>#####克隆远程库<br>使用cmd（安装过git直接可以右键文件夹使用<code>git bash here</code>）定位到要放置仓库的目录<br><code>git clone [远程仓库地址]</code><br>远程仓库就是托管到第三方平台上面的库。<br>常用的有github，这个私有是收费的，要用免费的只能是公共的。<br>目前国内用的比较多的<a href="https://coding.net/" target="_blank" rel="external">coding</a> ，和开源中国的<a href="http://git.oschina.net/" target="_blank" rel="external">码云</a>。原理都一样，只不过看起来会有点视觉上的差别，个人觉得coding比较简洁,适合学习，刚入门git的新手练习。而且视图更直观。<br>码云是我现在用的，功能要比coding多，包括直接下载上传文件以及打包好的apk文件。</p>
-<p>在这里要说一下克隆的时候有的坑，<strong>要克隆远程仓库必须是你在这个项目中，就是项目所有者（管理员）把你添加进这个项目成员</strong>。输入克隆的指令后，如果是第一次使用会提示你输入用户名，和密码。</p>
-<p>前面步骤如果无误，之后会显示克隆的进度，直到完成克隆。</p>
-<p>#####创建代码库<br>包括远程库（第三方平台）、本地库（存放代码信息）。</p>
-<ul>
-<li>创建远程库：根据第三方平台提示进行创建，一般都有步骤说明，按照说明来就好。<br>创建完成后建议初始化一下仓库，<br>可以在远程上根据提示，创建使用README.md文件初始化项目。<br>也可以使用git命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">echo &quot;# HelloWorld&quot; &gt;&gt; README.md</div><div class="line">git add README.md</div><div class="line">git commit -m &quot;first commit&quot;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>建议使用前者，直接在第三方上创建。</p>
-<ul>
-<li>创建本地仓库：有两种方法<br>1、使用git命令<br><code>git init</code><br>2、android Studio中（这里使用AS为例，其它的IDEA、webStorm操作都一样）<br>点击<code>VCS-import into version control-create git repository</code><br>会弹出选择仓库的路径，直接选当前项目就行，然后确定。<br>创建完之后，找到项目路径会发现文件夹下多了个.git文件，这个就是存放代码的仓库。<br>而且项目中的文件的名称都会变为红色，说明已经有仓库了，但是这些红色的项目文件，并没有加到本地仓库（.git仓库文件中）。<br><strong>（关于颜色后面我会具体说，各种颜色代表的状态）</strong></li>
-<li>关联本地和远程库<br>关联就是把本地仓库的.git仓库文件，和远程（coding）创建的仓库联系起来，每次提交代码，将本地.git中代码，提交到远程库。<br>使用命令：<br><code>git remote add origin [远程仓库地址]</code><br>如果是首次使用，会提示输入用户名+密码，用户名一般是邮箱，输错是关联不成功的。<br>关联成功则无提示，接着输入命令<br><code>git push origin master</code><br>如果失败，很大可能是远程仓库已存在文件。可以执行<br><code>git push -f origin master</code>强制提交。<br>提交过程是能看到进度的。<br>提交完成后可以去平台上查看有没有代码就知道是否成功。</li>
-</ul>
-<p><strong>注意：所有命令行操作必须使用cmd或者git bash定位到项目目录下</strong></p>
-<p>#####仓库基本使用<br>提交过程：<br><code>右键项目-git-add，弹框，选择是</code>；<br>这时候只是把代码添加到本地仓库，<br><code>再右键项目选择commit  directory 在弹框的commit message中输入提交信息，选择commit and push</code><br>然后会显示进度。<br>在多人协作开发一个项目的时候，提交之前一定要先pull一下（<code>VCS - pull</code>）,如果有冲突，选择合并或者是选择远程的，还是本地的，三者选一。<br>处理好这些再进行提交操作。</p>
-<p>#####分支管理<br>分支作为git一个重要的存在，可以进行版本回退，或者协作开发都是一个很便利的存在。<br>在创建仓库的时候，默认会有个master分支，如果是首次开发，则不需要创建分支。<br>但是在版本迭代的时候，特别是大版本迭代，就用到了分支，分支是相互独立存在的仓库。<br>互不影响，在克隆的时候切换一下分支，就会把不同分支下的仓库内容拷贝过来，就像1.0、2.0版本，是分开的，1.0在master分支，2.0版本在maste2分支，可以随时修改历史版本。</p>
-<p><strong>常用命令</strong><br>创建并切换到新建分支：<br><code>git checkout -b master2</code><br>切换分支：<br><code>git checkout master2</code><br>删除分支：<br><code>git branch -d fmaster2</code><br>将分支推送到远程仓库：<br><code>git push origin &lt;branch&gt;</code></p>
-<p>#####关于颜色<br>白色（正常色）：未改动或者没有仓库时的颜色。上<br>红色：未添加仓库的，在创建仓库时会出现。<br>绿色：已添加到本地仓库，没有进行commit push提交远程的。<br>蓝色：修改已经提交到本地仓库的代码。</p>
-<p>#####常见问题</p>
+<p>出现这种错误，有可能在配置_config.yml的时候，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: http://github.com/wapchief/wapchief.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>repo:设置了SSH方式连接，在没有ssh证书的情况下是连接失败的。解决方法是把ssh，修改为https方式连接。<br>如果仍报错，把https改为http。</p>
+<p>####二、</p>
 <blockquote>
-<p>有一种情况是提交/强制提交的时候出现</p>
+<p>ERROR Deployer not found: git</p>
 </blockquote>
-<p><code>error: src refspec master does not match any.
-error: failed to push some refs to &#39;https://github.com/wapchief/chat-room-JFrame.git&#39;</code><br>说明是本地代码库为空<br>解决办法：<br>1、在项目中，如android studio，打开项目，右键-&gt;Git-&gt;+Add，然后重新右键-&gt;Git-&gt;commit Directory-&gt;commit and push-&gt;commit。执行之后会发现代码文件颜色都变成正常的白色，之后回到命令行执行提交操作<br>2、在本地仓库创建一个文件，推送到仓库<br><code>touch README
-git add README 
-git commit -m &#39;first commit&#39;
-git push origin master</code><br>如果按照上面的步骤来的话是不会出现这种情况的，这种情况出现于已有现成的项目，并且本地项目的代码未提交到本地仓库。这时候提交到远程，就会判定你本地仓库为空。</p>
+<p>未安装部署工具<br>执行安装命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>####三、</p>
 <blockquote>
-<p>补充一个在提交过程中出现无法解决问题的办法</p>
+<p>fatal: unable to stat ‘node_modules/hexo-deployer-git/node_modules/hexo-fs/node_modules/chokidar/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/node_modules/is-number/LICENSE’: Filename too long</p>
 </blockquote>
-<p>如果在使用命令行操作时出现无法解决的错误，直接进入到项目文件，删除<code>.git</code>文件,然后右键该项目目录，或者使用cmd定位到该目录，重新执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git init  #初始化本地仓库</div><div class="line">git remote add origin [远程库地址]  #关联远程库</div><div class="line">git add . #提交本地代码到本地仓库的暂存区</div><div class="line">git commit -m &apos;[提交说明]&apos; #提交本地代码到本地仓库，并附上提交说明</div><div class="line">git push -f origin master #强制推送到远程库</div></pre></td></tr></table></figure></p>
+<p>这种情况一般是在执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git push</div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>的时候会出现。<br>报错提示名字超长，或者路径超范围。<br>解决的方法有很多，选择升级git。<br>或者配置git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config core.longpaths true</div></pre></td></tr></table></figure>
+<p>####四、</p>
+<blockquote>
+<p>相关工具问题</p>
+</blockquote>
+<p>因为使用hexo+github需要用到多个工具。有时候不确定是不是安装的问题可以通过下面的命令测试是否安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div><div class="line">git --version</div><div class="line">hexo -v</div></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2858691-f100c8bd2b0f428c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果都能正常显示版本信息，证明安装都没问题</p>
+<p>####五、</p>
+<blockquote>
+<p>页面不能正常显示，或者404</p>
+</blockquote>
+<p>检查根目录下的_config.yml文件是否配置正确，注意变量:后要加空格。<br>部署的时候，是根据branch判断部署的目录。</p>
+<p>部署成功后，无需再使用git命令提交远程，已经自动在远程生成了页面文件。</p>
+<p>还有种可能是主题有问题，关于主题可以去官网找，也可以去github，搜hexo theme。一般只要是用来搭建博客的都会有使用教程。</p>
+<p>####六、</p>
+<blockquote>
+<p>关于分支和更换电脑问题</p>
+</blockquote>
+<p>由于安装hexo的时候只在本地生成。而部署的时候只是把public目录里的文件和相关配置上传到github。<br>要想在远程也能管理，需要创建新的分支来存放源代码。</p>
+<p>或者通过其他第三方托管平台来托管源码，像coding，码云等都可以。<br>在github上托管是公共的，如果需要安全也可以这个办法。</p>
+<p>如果使用github分支，则使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch &amp;&amp; git checkout hexo</div></pre></td></tr></table></figure>
+<p>在本地创建一个新的分支并推送到远程仓库，<br>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &apos;提交说明&apos;</div><div class="line">//强制提交到hexo分支</div><div class="line">git push -f origin hexo</div></pre></td></tr></table></figure>
+<p>注意：在其他设备上克隆的时候，建议克隆下来之后把隐藏文件.deploy_git文件删除，否则容易冲突。</p>
+<p><strong>如果有其他问题可以，留言给我。看到一定会回复。<br>后面如果有新的问题，我也会在这篇文章中更新。</strong></p>
 <hr>
-<p>关于这些只是对于刚入门的学习者有些帮助，在我学习的时候也遇到了好多坑，至今有些问题还能遇到，但是不至于手忙脚乱，起码知道问题出在了哪个环节。<br>Git是一个很强大的版本控制工具，有很多功能，需要尝试去深入研究，希望学习者能够感受到他带来的便捷。</p>
+<p><a href="http://www.jianshu.com/p/a39573555039" target="_blank" rel="external">使用hexo+github免费搭建个人博客网站超详细教程</a><br><a href="http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="external">Hexo常见问题解决方案</a></p>
 
       
       
@@ -337,13 +349,13 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/09/2/">必须要会的Git基本使用及常用命令操作</a></p>
+        <p><span>本文标题:</span><a href="/2019/07/03/20170709_4/">使用hexo+github搭建个人博客遇到过哪些坑</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wap Chief 的个人博客">Wap Chief</a></p>
-        <p><span>发布时间:</span>2017年07月09日 - 11时41分</p>
-        <p><span>最后更新:</span>2017年07月09日 - 11时41分</p>
+        <p><span>发布时间:</span>2019年07月03日 - 15时40分</p>
+        <p><span>最后更新:</span>2019年07月03日 - 15时40分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/09/2/" title="必须要会的Git基本使用及常用命令操作">http://yoursite.com/2017/07/09/2/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/07/09/2/　　作者: Wap Chief" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/07/03/20170709_4/" title="使用hexo+github搭建个人博客遇到过哪些坑">http://yoursite.com/2019/07/03/20170709_4/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/07/03/20170709_4/　　作者: Wap Chief" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -356,7 +368,7 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
 
 <nav id="article-nav">
   
-    <a href="/2017/07/09/4/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/03/4/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
@@ -365,6 +377,11 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
       </div>
     </a>
   
+  
+    <a href="/2019/07/03/20170709_3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RecyclerViewHeader+ViewFlipper仿淘宝头条滚动效果</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -424,16 +441,18 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/07/09/4/" title="上一篇: 青少年心理引导类app目标用户人群分析">
+            <a href="/2019/07/03/4/" title="上一篇: 青少年心理引导类app目标用户人群分析">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/07/03/20170709_3/" title="下一篇: RecyclerViewHeader+ViewFlipper仿淘宝头条滚动效果">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_4/">使用hexo+github搭建个人博客遇到过哪些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_3/">RecyclerViewHeader+ViewFlipper仿淘宝头条滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/1/">使用hexo+github免费搭建个人博客网站超详细教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20161004/">ListView调用按钮删除某一行item</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_1/">使用Kotlin仿的简书个人主页，只需一个控件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/20170709_2/">Android仿掌上英雄联盟首页，实现折叠效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/4/">青少年心理引导类app目标用户人群分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/09/2/">必须要会的Git基本使用及常用命令操作</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/4/">青少年心理引导类app目标用户人群分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/20170709_4/">使用hexo+github搭建个人博客遇到过哪些坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/20170709_3/">RecyclerViewHeader+ViewFlipper仿淘宝头条滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/20170709_1/">使用Kotlin仿的简书个人主页，只需一个控件</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/20170709_2/">Android仿掌上英雄联盟首页，实现折叠效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/2/">必须要会的Git基本使用及常用命令操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/20161004/">ListView调用按钮删除某一行item</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/03/1/">使用hexo+github免费搭建个人博客网站超详细教程</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
@@ -463,7 +482,7 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2017 Wap Chief
+                &copy; 2019 Wap Chief
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
