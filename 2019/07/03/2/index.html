@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="wapchief的博客">
 <meta property="og:description" content="之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-27T09:24:56.394Z">
+<meta property="og:updated_time" content="2021-04-28T07:54:44.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="必须要会的Git基本使用及常用命令操作">
 <meta name="twitter:description" content="之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。">
@@ -173,7 +173,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。<br>最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。<br><a id="more"></a><br>一开始都是别人建好远程库，克隆下来就行了。<br>下面内容只是带你git入门，一些基础的东西，是开发过程中一些基本的操作，单单这些你会用了之后就能发现他的好处，以及使用命令行Enter敲击时的快感，还能提高逼格。<br>当然我们还是为了方便项目管理。</p>
-<p>#####安装<br>git工具下载地址，可以选择适合自己的操作系统：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a><br>安装完git，要配置环境变量，拷贝git安装目录下的bin文件目录，如D:\Program Files\Git\bin<br>,将目录拷贝添加到PATH变量后。<br><strong>注意：与前面的值要用“;”号隔开</strong><br>具体步骤：</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>git工具下载地址，可以选择适合自己的操作系统：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a><br>安装完git，要配置环境变量，拷贝git安装目录下的bin文件目录，如D:\Program Files\Git\bin<br>,将目录拷贝添加到PATH变量后。<br><strong>注意：与前面的值要用“;”号隔开</strong><br>具体步骤：</p>
 <blockquote>
 <p>右键计算机-属性-高级系统设置-环境变量-PATH将目录添加到后面，%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;D:\Program Files\Git\bin</p>
 </blockquote>
@@ -181,7 +181,7 @@
 <p>#####克隆远程库<br>使用cmd（安装过git直接可以右键文件夹使用<code>git bash here</code>）定位到要放置仓库的目录<br><code>git clone [远程仓库地址]</code><br>远程仓库就是托管到第三方平台上面的库。<br>常用的有github，这个私有是收费的，要用免费的只能是公共的。<br>目前国内用的比较多的<a href="https://coding.net/" target="_blank" rel="noopener">coding</a> ，和开源中国的<a href="http://git.oschina.net/" target="_blank" rel="noopener">码云</a>。原理都一样，只不过看起来会有点视觉上的差别，个人觉得coding比较简洁,适合学习，刚入门git的新手练习。而且视图更直观。<br>码云是我现在用的，功能要比coding多，包括直接下载上传文件以及打包好的apk文件。</p>
 <p>在这里要说一下克隆的时候有的坑，<strong>要克隆远程仓库必须是你在这个项目中，就是项目所有者（管理员）把你添加进这个项目成员</strong>。输入克隆的指令后，如果是第一次使用会提示你输入用户名，和密码。</p>
 <p>前面步骤如果无误，之后会显示克隆的进度，直到完成克隆。</p>
-<p>#####创建代码库<br>包括远程库（第三方平台）、本地库（存放代码信息）。</p>
+<h5 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h5><p>包括远程库（第三方平台）、本地库（存放代码信息）。</p>
 <ul>
 <li>创建远程库：根据第三方平台提示进行创建，一般都有步骤说明，按照说明来就好。<br>创建完成后建议初始化一下仓库，<br>可以在远程上根据提示，创建使用README.md文件初始化项目。<br>也可以使用git命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">echo &quot;# HelloWorld&quot; &gt;&gt; README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br></pre></td></tr></table></figure>
 </li>
@@ -192,12 +192,11 @@
 <li>关联本地和远程库<br>关联就是把本地仓库的.git仓库文件，和远程（coding）创建的仓库联系起来，每次提交代码，将本地.git中代码，提交到远程库。<br>使用命令：<br><code>git remote add origin [远程仓库地址]</code><br>如果是首次使用，会提示输入用户名+密码，用户名一般是邮箱，输错是关联不成功的。<br>关联成功则无提示，接着输入命令<br><code>git push origin master</code><br>如果失败，很大可能是远程仓库已存在文件。可以执行<br><code>git push -f origin master</code>强制提交。<br>提交过程是能看到进度的。<br>提交完成后可以去平台上查看有没有代码就知道是否成功。</li>
 </ul>
 <p><strong>注意：所有命令行操作必须使用cmd或者git bash定位到项目目录下</strong></p>
-<p>#####仓库基本使用<br>提交过程：<br><code>右键项目-git-add，弹框，选择是</code>；<br>这时候只是把代码添加到本地仓库，<br><code>再右键项目选择commit  directory 在弹框的commit message中输入提交信息，选择commit and push</code><br>然后会显示进度。<br>在多人协作开发一个项目的时候，提交之前一定要先pull一下（<code>VCS - pull</code>）,如果有冲突，选择合并或者是选择远程的，还是本地的，三者选一。<br>处理好这些再进行提交操作。</p>
+<h5 id="仓库基本使用"><a href="#仓库基本使用" class="headerlink" title="仓库基本使用"></a>仓库基本使用</h5><p>提交过程：<br><code>右键项目-git-add，弹框，选择是</code>；<br>这时候只是把代码添加到本地仓库，<br><code>再右键项目选择commit  directory 在弹框的commit message中输入提交信息，选择commit and push</code><br>然后会显示进度。<br>在多人协作开发一个项目的时候，提交之前一定要先pull一下（<code>VCS - pull</code>）,如果有冲突，选择合并或者是选择远程的，还是本地的，三者选一。<br>处理好这些再进行提交操作。</p>
 <p>#####分支管理<br>分支作为git一个重要的存在，可以进行版本回退，或者协作开发都是一个很便利的存在。<br>在创建仓库的时候，默认会有个master分支，如果是首次开发，则不需要创建分支。<br>但是在版本迭代的时候，特别是大版本迭代，就用到了分支，分支是相互独立存在的仓库。<br>互不影响，在克隆的时候切换一下分支，就会把不同分支下的仓库内容拷贝过来，就像1.0、2.0版本，是分开的，1.0在master分支，2.0版本在maste2分支，可以随时修改历史版本。</p>
 <p><strong>常用命令</strong><br>创建并切换到新建分支：<br><code>git checkout -b master2</code><br>切换分支：<br><code>git checkout master2</code><br>删除分支：<br><code>git branch -d fmaster2</code><br>将分支推送到远程仓库：<br><code>git push origin &lt;branch&gt;</code></p>
-<p>#####关于颜色<br>白色（正常色）：未改动或者没有仓库时的颜色。上<br>红色：未添加仓库的，在创建仓库时会出现。<br>绿色：已添加到本地仓库，没有进行commit push提交远程的。<br>蓝色：修改已经提交到本地仓库的代码。</p>
-<p>#####常见问题</p>
-<blockquote>
+<h5 id="关于颜色"><a href="#关于颜色" class="headerlink" title="关于颜色"></a>关于颜色</h5><p>白色（正常色）：未改动或者没有仓库时的颜色。上<br>红色：未添加仓库的，在创建仓库时会出现。<br>绿色：已添加到本地仓库，没有进行commit push提交远程的。<br>蓝色：修改已经提交到本地仓库的代码。</p>
+<h5 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h5><blockquote>
 <p>有一种情况是提交/强制提交的时候出现</p>
 </blockquote>
 <p><code>error: src refspec master does not match any.
@@ -329,15 +328,20 @@ git push origin master</code><br>如果按照上面的步骤来的话是不会�
   
 <nav id="article-nav">
   
-    <a href="/2019/07/03/1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/03/20161004/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          使用hexo+github免费搭建个人博客网站超详细教程
+          ListView调用按钮删除某一行item
         
       </div>
     </a>
   
+  
+    <a href="/2019/07/03/1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用hexo+github免费搭建个人博客网站超详细教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -461,6 +465,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -473,14 +485,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">kotlin</a>
               </li>
              
@@ -489,7 +493,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">产品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">flutter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">百度地图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">百度定位</a>
               </li>
             
             <div class="clearfix"></div>
